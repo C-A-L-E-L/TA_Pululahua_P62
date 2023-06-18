@@ -1,0 +1,507 @@
+@charset "UTF-8";
+
+body {
+  background: linear-gradient(to bottom, #283c86, #45a247);
+}
+
+/*= = = = = = = = = = = = = = = = = = = = = = = = = I-N-D-E-X = = = = = = = = = = = = = = = = = = = = = = = = = =*/
+/*- - - - - - - - - - - REDES - - - - - - - - - - -*/
+.containeRS {
+	border-radius: 15px;
+	padding: 0 10px 0 0;
+}
+
+.containeRS ul {
+	margin-bottom: 20px;
+	position: relative;
+	display: flex;
+	gap: 50px;
+	transform-style: preserve-3d;
+}
+
+.containeRS ul li {
+	position: relative;
+	list-style: none;
+	width: 60px;
+	height: 60px;
+}
+
+.containeRS ul li:before {
+	content: '';
+	position: absolute;
+	bottom: -10px;
+	left: -5px;
+	width: 100%;
+	height: 10px;
+	background: #333;
+	transform: skewX(-41deg);
+}
+
+.containeRS ul li:after {
+	content: '';
+	position: absolute;
+	top: 5px;
+	left: -9px;
+	width: 9px;
+	height: 100%;
+	background: #333;
+	transform: skewY(-49deg);
+}
+
+.containeRS ul li span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #333;
+	color: lawngreen;
+	font-size: 30px;
+	transition: 1.5s ease-out;
+	text-align: center;
+	padding: 15px;
+}
+
+.containeRS ul li:hover span {
+	z-index: 1000;
+	transition: .3s;
+	color: #fff;
+	box-shadow: -1px 1px 1px rgba(255, 255, 255, 0.7);
+}
+
+.containeRS ul li:hover span:nth-child(5) {
+	transform: translate(40px, -40px);
+	opacity: 1;
+}
+
+.containeRS ul li:hover span:nth-child(4) {
+	transform: translate(30px, -30px);
+	opacity: .8;
+}
+
+.containeRS ul li:hover span:nth-child(3) {
+	transform: translate(20px, -20px);
+	opacity: .6;
+}
+
+.containeRS ul li:hover span:nth-child(2) {
+	transform: translate(10px, -10px);
+	opacity: .4;
+}
+
+.containeRS ul li:hover span:nth-child(1) {
+	transform: translate(0px, 0px);
+	opacity: .2;
+}
+
+.containeRS ul li:nth-child(1):hover span {
+	background: #0eadf7;
+}
+
+.containeRS ul li:nth-child(2):hover span {
+	background: #ff0000;
+}
+
+.containeRS ul li:nth-child(3):hover span {
+	background: #0000ff;
+}
+
+.containeRS ul li:nth-child(4):hover span {
+	background: #FCEB00;
+}
+
+/*- - - - - - - - - - - LOGO - - - - - - - - - - -*/
+.logo {
+	padding: 25px 775px 0 0;
+}
+
+/*- - - - - - - - - - - MENU NAV BTN - - - - - - - - - - -*/
+.containerM {
+    display: flex;
+    float: right;
+    flex-direction: column;
+    position: absolute;
+    right: 20px;
+}
+
+/* SECTION TEXT */
+.containerM .section__text {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.containerM .section__text img {
+  width: 40px; /* ajusta el ancho de la imagen según tu necesidad */
+  margin-right: 50px; /* separación entre imagen y botones */
+}
+
+.containerM p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    letter-spacing: 4px;
+    border-right: solid 3px #bee60c;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: 
+            animated-text 4s steps(29,end) 1s 1 normal both, 
+            animated-cursor 600ms steps(29,end) infinite;   
+}
+
+.containerM p a {			/* Enlace bonito */
+    letter-spacing: 0px;
+    text-decoration: none;
+    color: #bee60c;
+}
+
+.containerM .icon {
+    font-size: 16px;
+    color: #051c2e;
+    background: #bee60c;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+/* Animation */ 
+@keyframes animated-text{
+    from{width: 0;}
+    to{width: 165px;}
+}
+  
+/* Cursor Animation */ 
+@keyframes animated-cursor{
+    from{border-right-color: #bee60c;}
+    to{border-right-color: transparent;}
+}
+
+.containerM .buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.containerM .btn {
+    border: none;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    color: #c0c0c0;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 10px;
+    width: 150px;
+    height: 50px;
+    background-color: #250902;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+    border-radius: 4px;
+}
+
+.containerM .btn:hover {
+  color: #ffffff;
+}
+
+.containerM .btn span {
+    position: relative; 
+    z-index: 1;
+}
+
+.containerM .buttons a {
+    text-decoration: none;
+}
+
+.containerM .btn:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 550%;
+    width: 140%;
+    background: #75172a;
+    transition: all .5s ease-in-out;
+    transform: translateX(-98%) 
+               translateY(-25%) 
+               rotate(45deg);
+}
+
+.containerM .btn:hover:after {
+    transform: translateX(-9%) 
+               translateY(-25%) 
+               rotate(45deg);
+}
+
+.containerM .link {
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.containerM .link a {
+    color: #000;
+    font-size: 25px; 
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 0 0 0;
+}
+
+.linea {
+	color: white;
+}
+
+/*- - - - - - - - - - - TEXT - - - - - - - - - - -*/
+.descripcion {
+  display: flex;
+  justify-content: center;
+}
+
+.agruparEC {
+	margin: 15px;
+	width: 700px;
+	float: left;
+	border-radius: 10px;
+	border: none;
+	padding: 0 15px 0 10px;
+}
+
+h3 {
+	font-family: Arial, sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 5px;		/*Separa letras*/
+	font-style: italic; /*Para letra Cursiva*/
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /*Para letra Cursiva*/
+	text-align: center;
+	font-size: 60px;
+	color: white;
+}
+
+.textSection {
+	text-align: justify;
+	font-size: 17px;
+	color: white;
+	padding: 60px 0 0 10px;
+}
+
+/*- - - - - - - - - - - CARRUCEL - - - - - - - - - - -*/
+.carousel-item img {
+	height: 400px;
+	object-fit: cover;
+	border-radius: 30% 0 30% 0;
+}
+
+/*- - - - - - - - - - - FOOTER - - - - - - - - - -*/
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 30px;
+	clear: both;		/*alfinal de la pag*/
+	background: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	font-size: 20px; 
+}
+
+/*- - - - - - - - - - - TITULO - - - - - - - - - -*/
+.titulo1 {
+	font-style: italic; /*Para letra Cursiva*/
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /*Para letra Cursiva*/
+	font-size: 70px;
+    background: linear-gradient(#1497be, #1c2aec);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    animation: text 5s linear infinite;
+    padding: 45px 0 0 25px;
+}
+
+@keyframes text {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+/*= = = = = = = = = = = = = = = = = = = = = = = = = A-C-T-I-V-I-D-A-D-E-S = = = = = = = = = = = = = = = = = = = = = = = = = =*/
+.sections {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.act h1 {
+	font-size: 2em;
+	color: white;
+	text-align: center;
+	padding: 5px 0 10px 0;
+	text-transform: uppercase; /*Set Text Mayusculas*/
+	letter-spacing: 5px; /*Separa letras*/
+}
+
+/*- - - - - - - - - - - TITULO - - - - - - - - - -*/
+h2{
+	text-align: center;
+}
+
+/*- - - - - - - - - - - #1 - - - - - - - - - - - - -*/
+#Senderismo {
+    height: 440px;
+    max-width: 1000px;
+    background: linear-gradient(to bottom, #DCE35B,#45B649);
+    text-align: center;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.contenido {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	width: 100%;
+	padding-top: 20px; /* añadimos un poco de espacio en la parte superior */
+}
+
+.actividadesART {
+	border: none;
+	text-align: justify;
+	margin: 15px;
+	width: 40%; /* reducimos un poco el ancho */
+	margin-right: 20px;
+	float: left;
+	border-radius: 10px;
+	padding: 25px; /* ajustamos el padding */
+	font-size: 20px;
+}
+
+.caminata {
+  display: block;
+  margin: 0 auto;
+  border-radius: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+
+/*- - - - - - - - - - - #2 - - - - - - - - - - - - -*/
+#Ciclismo {
+    height: 440px;
+    max-width: 1000px;
+    background: linear-gradient(to bottom, #f7b733,#fc4a1a);
+    text-align: center;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.vici {
+  display: block;
+  margin: 0 auto;
+  border-radius: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/*- - - - - - - - - - - #3 - - - - - - - - - - - - -*/
+#Campamento {
+  height: 440px;
+  max-width: 1000px;
+  background: linear-gradient(to bottom, #5f2c82, #49a09d);
+  text-align: center;
+  margin: 20px;
+  border-radius: 10px;
+  overflow: hidden; /* añadimos overflow hidden para evitar que el video se salga de la sección */
+}
+
+.camping {
+  display: block;
+  margin: 0 auto;
+  border-radius: 30px; 
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+
+
+/*= = = = = = = = = = = = = = = = = = = = = = = = = C-O-N-T-A-C-T-O-S = = = = = = = = = = = = = = = = = = = = = = = = = =*/
+.tabla {
+	display: flex;
+	flex-direction: row;
+	margin: 20px auto;
+	max-width: 39%;
+	border-collapse: collapse;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.tabla th, .tabla td {
+	padding: 10px;
+	text-align: center;
+}
+
+.tabla th {
+	background-color: #34495e;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+.tabla td {
+	border: 1px solid #ccc;
+	font-size: 14px;
+}
+
+.tabla tr:nth-child(even) td {
+	background-color: #f2f2f2;
+}
+
+.final {
+  display: flex;
+  text-align: center;
+}
+
+/*= = = = = = = = = = = = = = = = = = = = = = = = = A-U-T-O-R = = = = = = = = = = = = = = = = = = = = = = = = = =*/
+/*- - - - - - - - - - - FOTOA - - - - - - - - - -*/
+.Divautor {
+	 display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30vh; /* altura completa de la ventana del navegador */
+  margin: 80px 0 60px 60px;
+}
+
+.Divautor img {
+  border-radius: 10%;
+}
+/*- - - - - - - - - - - FOOTER - - - - - - - - - - -*/
+/*- - - - - - - - - - - REDES - - - - - - - - - - -*/
+.autorPie ul li:nth-child(1):hover span {
+	background: #0eadf7;
+}
+
+.autorPie ul li:nth-child(2):hover span {
+	background: #00ff00;
+}
+
+.autorPie ul li:nth-child(3):hover span {
+	background: #0000ff;
+}
+
+.autorPie ul li:nth-child(4):hover span {
+	background: #808080;
+}
+
+/*- - - - - - - - - - - FOOTER - - - - - - - - - -*/
+.autorPie {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 30px;
+	clear: both;		/*alfinal de la pag*/
+	background: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	font-size: 20px; 
+}
